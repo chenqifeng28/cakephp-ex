@@ -9,12 +9,12 @@ pipeline  {
     stage('TEST') {
       steps {
         parallel(
-          "TEST": {
-            sh 'echo "TEST"'
+          "AUTO-TEST": {
+            sh 'echo "AUTOMATION TESTING"'
             
           },
-          "UAT": {
-            sh 'echo "UAT"'
+          "QA-TEST": {
+            sh 'echo "QA TEST"'
             
           }
         )
