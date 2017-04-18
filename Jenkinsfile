@@ -1,4 +1,5 @@
-pipeline {
+pipeline  {
+  node('maven'){
   agent any
   stages {
     stage('DEV') {
@@ -20,5 +21,6 @@ pipeline {
         )
       }
     }
+  }
   }
 }
