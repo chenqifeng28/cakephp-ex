@@ -1,5 +1,10 @@
-pipeline  {
-    agent {label 'maven'}
+pipeline {
+  agent {
+    node {
+      label 'maven'
+    }
+    
+  }
   stages {
     stage('DEV') {
       steps {
