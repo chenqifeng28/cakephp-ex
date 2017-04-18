@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('DEV') {
       steps {
-        sh 'sh \'echo "DEV"\''
+        sh 'sh \'oc whoami\''
       }
     }
     stage('TEST') {
