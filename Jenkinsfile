@@ -8,7 +8,16 @@ pipeline {
     }
     stage('TEST') {
       steps {
-        sh 'echo "TEST"'
+        parallel(
+          "TEST": {
+            sh 'echo "TEST"'
+            
+          },
+          "UAT": {
+            sh 'echo "UAT"'
+            
+          }
+        )
       }
     }
   }
