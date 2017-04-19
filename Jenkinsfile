@@ -25,5 +25,11 @@ pipeline {
         )
       }
     }
+    stage('UAT') {
+      steps {
+        sh 'echo "Deploy UAT"'
+        echo 'Ready for UAT'
+      }
+    }
   }
 }
